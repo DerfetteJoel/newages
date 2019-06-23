@@ -1,9 +1,13 @@
 package dfj.newages;
 
+import dfj.newages.blocks.ModBlocks;
+import dfj.newages.blocks.NewBlock;
 import dfj.newages.setup.ClientProxy;
 import dfj.newages.setup.IProxy;
 import dfj.newages.setup.ServerProxy;
 import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
@@ -34,9 +38,13 @@ public class NewAges {
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            LOGGER.info("HELLO from Register Block");
+        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
+            event.getRegistry().register(new NewBlock());
+        }
+
+        @SubscribeEvent
+        public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+            event.getRegistry().register(new BlockItem(ModBlocks.NEWBLOCK, new Item.Properties()).setRegistryName("newblock"));
         }
     }
 }
