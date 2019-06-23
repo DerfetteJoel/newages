@@ -1,7 +1,7 @@
 package dfj.newages;
 
 import dfj.newages.blocks.ModBlocks;
-import dfj.newages.blocks.NewBlock;
+import dfj.newages.blocks.BlockNewBlock;
 import dfj.newages.setup.ClientProxy;
 import dfj.newages.setup.IProxy;
 import dfj.newages.setup.ServerProxy;
@@ -39,7 +39,7 @@ public class NewAges {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new NewBlock());
+            event.getRegistry().register(new BlockNewBlock());
         }
 
         @SubscribeEvent
