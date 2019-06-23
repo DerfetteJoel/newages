@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "idi",
+    "iii"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "newages:workbench_advanced"
+  }
+}
