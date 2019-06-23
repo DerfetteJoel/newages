@@ -1,7 +1,7 @@
 package dfj.newages;
 
+import dfj.newages.blocks.BlockWorkbenchAdvanced;
 import dfj.newages.blocks.ModBlocks;
-import dfj.newages.blocks.BlockNewBlock;
 import dfj.newages.setup.ClientProxy;
 import dfj.newages.setup.IProxy;
 import dfj.newages.setup.ServerProxy;
@@ -39,12 +39,16 @@ public class NewAges {
     public static class RegistryEvents {
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
-            event.getRegistry().register(new BlockNewBlock());
+            event.getRegistry().registerAll(
+                    new BlockWorkbenchAdvanced()
+            );
         }
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(new BlockItem(ModBlocks.NEWBLOCK, new Item.Properties()).setRegistryName("newblock"));
+            event.getRegistry().registerAll(
+                    new BlockItem(ModBlocks.WORKBENCH_ADVANCED, new Item.Properties()).setRegistryName("workbench_advanced")
+            );
         }
     }
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "newages:block/workbench_advanced",
+    "down": "newages:block/workbench_advanced_bottom",
+    "up": "newages:block/workbench_advanced_top",
+    "east": "newages:block/workbench_advanced",
+    "west": "newages:block/workbench_advanced",
+    "north": "newages:block/workbench_advanced",
+    "south": "newages:block/workbench_advanced"
+  }
+}

@@ -4,6 +4,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 public class ModBlocks {
 
-    @ObjectHolder("newages:newblock")
-    public static BlockNewBlock NEWBLOCK;
+    @ObjectHolder("newages:workbench_advanced")
+    public static BlockWorkbenchAdvanced WORKBENCH_ADVANCED;
+
 }
